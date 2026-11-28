@@ -12,7 +12,8 @@ const UserSchema = new Mongoose.Schema({
     trim : true,
     minLength : 2,
     maxLength : 30,
-    immutable :true
+    immutable :true,
+    unique:true
   },
   password :{
     type : String,
@@ -56,5 +57,5 @@ const User = mongoose.model("User",UserSchema)
 
 
 module.exports ={
-  User
+   User
 }
